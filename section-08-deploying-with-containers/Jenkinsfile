@@ -10,14 +10,14 @@ pipeline{
         
         stage('Hello'){
             steps{   
-                echo "Message"             
-                //sh "python3 section-08-deploying-with-containers/hello.py"                
+                sh "python section-08-deploying-with-containers/hello.py"                
             }
         }
         
         stage('TOX-Train model..'){
             steps{
-                echo "running text on Section-05 Model Package"
+                echo "Deploying to the env..."
+                sh "tox -e train"
                 //sh "python section-05-production-model-package/regression_model/train_pipeline.py"                
                 //sh "python3 -m tox -c section-05-production-model-package/tox.ini -e test_package"
             }
