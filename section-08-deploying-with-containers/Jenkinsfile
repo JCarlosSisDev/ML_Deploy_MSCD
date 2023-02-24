@@ -9,7 +9,8 @@ pipeline{
         }
         
         stage('Hello'){
-            steps{                
+            steps{   
+                echo "Message"             
                 //sh "python3 section-08-deploying-with-containers/hello.py"                
             }
         }
